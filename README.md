@@ -29,3 +29,5 @@ npm start
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+For a `serverbuilder` version, please check out the [_sb_ branch](https://github.com/Berkmann18/socket-chat/tree/sb).
