@@ -5,7 +5,6 @@ import vuetify from "./plugins/vuetify";
 Vue.config.productionTip = process.env.NODE_ENV === "production";
 
 new Vue({
-  // router,
   vuetify,
   render: h => h(App)
 }).$mount("#app");

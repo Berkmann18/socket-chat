@@ -22,9 +22,8 @@
 
 <script>
 import io from "socket.io-client";
-
 const PORT = process.env.PORT ?? 3001;
-/* eslint-disable no-console */
+
 export default {
   name: "chat",
   data() {
@@ -37,21 +36,16 @@ export default {
   },
   methods: {
     sendMessage() {
-      const data = {
+      this.socket.emit("SEND_MESSAGE", {
         user: this.user,
         message: this.message,
         ts: Date.now() + this.user[0]
-      };
-      console.log("Sending data=", data);
-      this.socket.emit("SEND_MESSAGE", data);
+      });
       this.message = "";
     }
   },
   mounted() {
-    this.socket.on("MESSAGE", data => {
-      this.messages.push(data);
-      console.log(data);
-    });
+    this.socket.on("MESSAGE", data => this.messages.push(data));
   }
 };
 </script>
