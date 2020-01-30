@@ -1,5 +1,7 @@
 # socket-chat
 
+This app is based on [this tutorial](https://medium.com/@jaouad_45834/basic-chat-web-app-using-express-js-vue-js-socket-io-429588e841f0) (the main difference being that I used Vuetify and not Boostrap and implemented the message display system).
+
 ## Project setup
 ```
 npm install
