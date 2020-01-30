@@ -1,13 +1,14 @@
-const express = require("express");
-const app = express();
+/* eslint-disable no-console */
+const app = require("express")();
+const Server = require("serverbuilder");
 const PORT = process.env.PORT || 3001;
 
-const server = app.listen(PORT, () => {
-  //eslint-disable-next-line no-console
-  console.log(`Server is running on port ${PORT}`);
+const server = new Server(app, PORT, {
+  name: "Chat Server"
 });
+server.run().catch(console.error);
 
-const io = require("socket.io")(server);
+const io = require("socket.io")(server.server);
 
 io.on("connection", socket => {
   // console.log('sid=', socket.id);

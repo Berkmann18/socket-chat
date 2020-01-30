@@ -6,8 +6,8 @@
     <v-card-text>
       <div class="messages">
         <p v-for="msg in messages" :key="msg.ts">
-          <strong>{{ msg.user }}</strong
-          >: {{ msg.message }}
+          <strong>{{ msg.user }}</strong>
+          : {{ msg.message }}
         </p>
       </div>
       <br />
