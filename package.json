@@ -65,5 +65,10 @@
       "vue-cli-service lint",
       "git add"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-adapter-eslint"
+    }
   }
 }
